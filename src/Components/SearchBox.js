@@ -9,7 +9,7 @@ export default function SearchBox(filter){
         <input className='app__header__menu__search'
         type='text'
         placeholder={filter.placeholder}
-        onChange={filter.action }/>
+        onChange={filter.action}/>
         </div>
         </div>
         

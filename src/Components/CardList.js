@@ -31,7 +31,7 @@ export default function CardList() {
     //     }
     
     const buscaPersonagens = (page) => {
-        fetch(`https://rickandmortyapi.com/api/character/?page=1`)
+        fetch(`https://rickandmortyapi.com/api/character`)
             .then(res => res.json())
             .then((personagem) => {
 
@@ -71,7 +71,7 @@ useEffect(() => {
 // }
 
 const filterPersonagem = (evento) => {
-    const filtered = busca.filter(item => item.name.includes(evento.target.value))
+    const filtered = busca.filter(item => item.name.toLowerCase().includes(evento.target.value.toLowerCase()))
 
     setPersonagens(filtered)
 }
