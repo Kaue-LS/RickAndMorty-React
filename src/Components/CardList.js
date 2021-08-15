@@ -31,13 +31,13 @@ export default function CardList() {
     //     }
     
     const buscaPersonagens = (page) => {
-        fetch(`https://rickandmortyapi.com/api/character/?page=`+page)
+        fetch(`https://rickandmortyapi.com/api/character/?page=1`)
             .then(res => res.json())
             .then((personagem) => {
 
-                setPersonagens([personagens,...personagem.results]);
+                setPersonagens(personagem.results);
                 setBusca(personagem.results);
-                // console.log(page)
+                console.log(page)
                 setLoading(false);
 
                 // buscaPersonagens(personagem.info.next)
@@ -66,9 +66,9 @@ useEffect(() => {
 //         buscaPersonagens();
 //     },);
     
-const nextPage = (page)=>{
-    setPage( page + 1)
-}
+// const nextPage = (page)=>{
+//     setPage( page + 1)
+// }
 
 const filterPersonagem = (evento) => {
     const filtered = busca.filter(item => item.name.includes(evento.target.value))
@@ -81,7 +81,7 @@ return (
         <SearchBox className='app__search' placeholder='Buscar personagem' action={filterPersonagem}></SearchBox>
         <div className='app__list'>
             { 
-            loading ? ('Error' ) 
+            loading ? ('Carregando' ) 
             : ( personagens.map((personagens) => (
                     <>
                         <Card personagem={personagens} key={personagens.id}></Card>
@@ -92,7 +92,8 @@ return (
 
             }
 
-<button className='app__button' onClick={()=>nextPage(page)}>Mais</button>
+{/* <button className='app__button' onClick={()=>nextPage(page)}>Mais</button> */}
+<button>Mais</button>
 
 
 
