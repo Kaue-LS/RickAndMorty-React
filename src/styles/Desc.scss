@@ -1,0 +1,154 @@
+$--Alive: #67e103;
+$--unknown: #5a6865;
+$--Dead: #f825008e;
+
+
+@mixin status($cor) {
+    border: 10px solid  $cor; 
+    border-radius: 10rem;
+    box-shadow: $cor -0px -0px 15px 1px;
+    background-color: $cor;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+@font-face {
+    font-family:RickandMorty ;
+    src: url('./get_schwifty.ttf');
+}
+@mixin centralizar {
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+  }
+@mixin tema($cor) {
+    background-color: $cor;
+  }
+
+  .app{
+       
+        &__desc{
+
+            
+            padding: 1rem 1rem;
+            background-color: #1f1e1e;
+            min-width: 80%;
+            max-width: 40%;
+            &__button{
+                color: white;
+                text-decoration: none;
+                background-color:rgb(1, 162, 36);
+                width: 100%;
+                border-radius: 5px;
+                padding:10px 20px ;
+                margin: 20px 20px 20px 20px ;
+                
+            }
+        &__block{
+            &__name{
+                font-family: RickandMorty;
+                color: rgb(0, 244, 158);
+                font-size: 40px;
+                text-shadow: greenyellow 0px 0px 3px;
+                text-align: center;
+                width: 100%;
+                padding: 10px 13rem 0px 0px
+            }
+            
+            @include centralizar;
+            width: 100%;
+            padding: 10px 10rem 10rem 5rem;
+
+      
+        &__image{
+        
+            padding:0;
+           
+        
+        
+
+        &--Alive{
+            max-width: 100%;
+            min-width:10%;
+        margin: 0rem 15rem  0rem 0rem;
+            @include status($--Alive);
+        }
+        &--Dead{
+            max-width: 100%;
+            min-width:10%;
+        margin: 0rem 15rem  0rem 0rem;
+            @include status($--Dead);
+        }
+        &--unknown{
+            max-width: 100%;
+            min-width:10%;
+            margin: 0rem 15rem  0rem 0rem;
+                @include status($--unknown);
+            }
+        }
+        
+        }
+        &__characteristic{
+            
+            
+        
+            max-width: 100%;
+            min-width:10%;       
+            &__schema{
+                color:rgb(0, 244, 158);
+                text-shadow: greenyellow 0px 0px 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                
+                background-color: rgb(11, 22, 0);
+                border: 5px solid rgb(24, 43, 27);
+                padding: 10px 20px;
+
+                p{
+                    padding: 0.5rem 0rem;
+                }
+            }
+        }
+       
+    }
+    @media screen and(max-width:800px){
+        .app{
+          
+        &__desc{
+            @include centralizar;
+
+            &__block{
+               display: block; 
+            }
+            &__characteristic{
+            
+            
+        
+                max-width: 100%;
+                min-width:10%;       
+                &__schema{
+                    color:rgb(0, 244, 158);
+                    text-shadow: greenyellow 0px 0px 1px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    
+                    background-color: rgb(11, 22, 0);
+                    border: 5px solid rgb(24, 43, 27);
+                    padding: 10px 170px 0px 11px;
+                    
+    
+                    p{
+                        padding: 0.5rem 0rem;
+                    }
+                }
+            }
+        }
+    }
+    }
+  }

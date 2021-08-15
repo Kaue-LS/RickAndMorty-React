@@ -1,0 +1,75 @@
+
+@mixin centralizar {
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  @font-face {
+    font-family:RickandMorty ;
+    src: url('./get_schwifty.ttf');
+}
+.app{
+    @include centralizar;
+
+    &__header{
+        
+         height: 3.5rem;
+         max-width: 100%;
+         min-width: 100%;
+        background-color: rgb(29, 25, 29);
+     &__logo{
+
+         width:50%;
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-content: left;
+        font-family: RickandMorty;
+        color: rgb(0, 244, 158);
+        font-size: 25px;
+        padding:10px 18px;
+     }
+        &__menu{
+            display: flex;
+            align-items: center;
+            align-items: center;
+            justify-content: right;
+    
+    &__search{
+        margin:-2.4rem 0.5rem auto 0rem;
+        width: 25%;
+        height: 50%;
+        padding: 6px 10px;
+    }
+    }
+}
+}
+@media screen and(max-width:800px){
+    .app{
+        
+        @include centralizar;
+        flex-direction: column;
+    
+        &__header{
+            display: flex;
+             height: 5.5rem;
+             max-width: 50%;
+            background-color: rgb(29, 25, 29);
+            &__menu{
+                display: flex;
+                align-items: center;
+                align-items: center;
+                justify-content: right;
+        
+        &__search{
+            margin:-2.4rem 0.5rem auto 0rem;
+            width: 55%;
+            height: 100%;
+            padding: 6px 0px;
+        }
+        }
+    }
+
+    }
+}
