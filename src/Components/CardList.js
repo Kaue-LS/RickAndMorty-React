@@ -6,7 +6,7 @@ import SearchBox from "../Components/SearchBox";
 export default function CardList() {
     const [personagens, setPersonagens] = useState([]);
     const [busca, setBusca] = useState([])
-    const [page, setPage] = useState(1)
+    // const [page, setPage] = useState(1)
     const [loading, setLoading] = useState(true)
     // const [dados,setDados] = useState([])
 
@@ -30,14 +30,14 @@ export default function CardList() {
     //             })
     //     }
     
-    const buscaPersonagens = (page) => {
+    const buscaPersonagens = () => {
         fetch(`https://rickandmortyapi.com/api/character`)
             .then(res => res.json())
             .then((personagem) => {
 
                 setPersonagens(personagem.results);
                 setBusca(personagem.results);
-                console.log(page)
+                // console.log(page)
                 setLoading(false);
 
                 // buscaPersonagens(personagem.info.next)
@@ -59,12 +59,12 @@ export default function CardList() {
 // console.log(page)
 
 
-useEffect(() => {
-    buscaPersonagens(page);
-},);
-//  useEffect(() => {
-//         buscaPersonagens();
-//     },);
+// useEffect(() => {
+//     buscaPersonagens(page);
+// },);
+ useEffect(() => {
+        buscaPersonagens();
+    },);
     
 // const nextPage = (page)=>{
 //     setPage( page + 1)
