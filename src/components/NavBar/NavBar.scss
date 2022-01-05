@@ -1,0 +1,154 @@
+@font-face {
+    font-family:RickandMorty ;
+    src: url('../Libs//Font//get_schwifty.ttf');
+}
+
+.NavBar{
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+
+    @media (max-width:420px) {
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+    &__Logo{
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        @media (max-width:720px) {
+            display: flex;
+            flex-direction: row-reverse;
+
+            }
+
+        h1{
+            text-shadow: greenyellow 0px 0px 3px;
+            color: rgb(0, 244, 158);
+            margin: 0 20px;
+            font-family: RickAndMorty;
+            font-size: 2rem;
+        text-decoration: none;
+
+            @media (max-width:720px) {
+                font-size: 1.5rem;
+                }
+        }
+
+
+        &__Link{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+        }
+        &__Icon{
+            &__true{
+            width: 10rem ;
+           
+            @media (max-width:720px) {
+                display: none;
+            }
+            }
+            &__false{
+                width: 10rem;
+                @media (max-width:720px) {
+                    display: none;
+                }
+            }
+            &__Mobile{
+                display: none;
+                @media (max-width:720px) {
+                width: 8rem;
+                display: block;
+
+                }
+                @media (max-width:480px) {
+                    display: none;
+    
+                    }
+            }
+        }
+      
+    }
+    &__Buttons{
+        cursor: pointer;
+
+        margin: 0 5rem;
+
+        button{
+        cursor: pointer;
+
+            background: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 20px 10px;
+            border: none;
+            margin: 0 0rem;
+            transition: 200ms;
+           
+        }
+        button:hover{
+            border-radius: 5px;
+            background-color:#39ff14 ;
+        }
+        @media(max-width:880px){
+            display: none;
+        }
+    }
+    &__Mobile{
+        display: none;
+        @media(max-width:880px){
+        display: flex;
+        overflow:visible;
+        margin: 0 4rem;
+            justify-content: flex-end;
+            align-items: center;
+        width:5rem;
+        height: 5rem;
+        img{
+            width: 80%;
+            height: 80%;
+        }
+    }
+}
+   
+}
+.ButtonsMobile{
+    display: flex;
+    background-color: rgb(24, 24, 24);
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    button{
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px 10px;
+        margin: 10px auto;
+        width: 80%;
+        cursor: pointer;
+        color:white;
+        background: none;
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid #ffffff80;
+        border-bottom: 2px solid  #ffffff80;
+        transition: 200ms;
+           
+    }
+    button:hover{
+        border-radius: 5px;
+        background-color:#39ff14 ;
+    }
+}

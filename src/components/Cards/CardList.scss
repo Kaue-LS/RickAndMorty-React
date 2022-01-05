@@ -1,0 +1,70 @@
+@font-face {
+    font-family:RickandMorty ;
+    src: url('../Libs//Font//get_schwifty.ttf');
+}
+
+.cardList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    &{
+        @media(max-width:1020px){
+        width: 100%;
+    }
+    &__Card{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+   
+}
+.Buttons{
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row-reverse;
+&__Plus{
+    font-family: RickandMorty;
+    display: flex;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid ;
+    color: rgb(0, 244, 158);
+    background-color: black;
+    justify-content: center;
+    margin: 2rem auto;
+    font-size: 2rem;
+    padding: 10px 20px;
+    font-weight: 900;
+    transition: 300ms;
+    &:hover{
+        text-shadow: greenyellow 0px 0px 3px;
+        box-shadow: 0px 0px 10px inset greenyellow ;
+    }
+}
+&__Less{
+    font-family: RickandMorty;
+    display: flex;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid ;
+    color: rgb(0, 244, 158);
+    background-color: black;
+    justify-content: center;
+    margin: 2rem auto;
+    font-size: 2rem;
+    padding: 10px 20px;
+    font-weight: 900;
+    transition: 300ms;
+    &:hover{
+        text-shadow: greenyellow 0px 0px 3px;
+        box-shadow: 0px 0px 10px inset greenyellow ;
+    }
+}
+}

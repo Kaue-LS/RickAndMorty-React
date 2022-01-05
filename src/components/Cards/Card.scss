@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+$fonte-principal:'PT Sans Narrow', sans-serif;
+
+$--Dead: #f82500;
+$--Alive: #55ff00;
+
+$--unknown: #5a6865;
+
+
+@mixin tema($cor) {
+    background-color: $cor;
+  }
+// =========================================================
+.Card{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    background-color: #233333;
+    justify-content: space-between;
+    margin: 10px 20px;
+    border-radius: 0.5rem;
+    padding: 10px 5px;
+    @media (max-width:720px) {
+        flex-direction: column;
+        margin: 10px auto;
+        padding: 5px 10px;
+        justify-content: center;
+        align-items: center;
+        }
+    &__Image{
+        border-radius: 100%;
+        width: 8rem;
+        border: 5px double gray;
+    }
+&__Info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 9rem;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    
+    &--Alive{
+        height: 25px;
+        width: auto;
+        margin: 0 auto;
+        border-radius: 100%;
+        border: 2px solid black;
+        padding: 10px 10px;
+        box-shadow: 0px 0px 5px #3fbe00;
+        @include tema($--Alive)
+    }
+    &--Dead{
+        height: 25px;
+        width: auto;
+        margin: 0 auto;
+        border-radius: 100%;
+        border: 2px solid black;
+        padding: 10px 10px;
+        box-shadow: 0px 0px 5px #bd1c00;
+        @include tema($--Dead)
+    }
+    &--unknown{
+        height: 25px;
+        width: auto;
+        margin: 0 auto;
+        border-radius: 100%;
+        border: 2px solid black;
+        padding: 10px 10px;
+        @include tema($--unknown)
+    }
+    &__Name{
+        text-align: justify;
+        width: 6.4rem;
+        color: #DCDCDC;
+        font-size: 1.2rem;
+    }
+    &__Status{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        color: #ffffff;
+        font-size: 1.2rem;
+        
+        span{
+            margin: 0px 5px;
+        }
+    }
+}
+&__Link{
+    display:flex;
+    flex-direction: row;
+    text-decoration: none;
+    @media(max-width:880px){
+        flex-direction: column;
+    }
+    
+}
+}

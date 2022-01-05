@@ -1,21 +1,11 @@
-import {BrowserRouter,Switch,Route} from 'react-router-dom';
-import CardList from"./Components/CardList";
-import "./styles/main.scss";
-import './styles/Desc.scss';
-// import EpList from '../src/Components/EpList'
- import Desc from "./Components/Desc"
+import Router from "./Router";
+import './App.css'
+// Aqui esta o arquivo Router onde as paginas estão conectadas
 function App() {
   return (
-    <>
-      <div className='app'>
-        <BrowserRouter>
-          <Switch>
-            <Route path='/'exact={true} component={CardList}/>
-            <Route path='/sobre/:id' component={Desc}/>
-          </Switch>
-        </BrowserRouter>
-      </div>
-    </>
+    <div className="app">
+      <Router></Router>
+    </div>
   );
 }
 
