@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom'
 export default function Desc(){
     const Location =useLocation()
     const {state}=Location.state
-    (state)
 
     return(
         <>
